@@ -1,0 +1,107 @@
+[
+  {
+    "id": "fire_selector_ar15_semi",
+    "type": "GUNMOD",
+
+    "name": {
+      "str": "AR-15 fire selector (semi-auto)"
+    },
+    "description": "A fire selector mechanism for civilian AR-15s and related firearms.  Allows the gun to switch firing modes.  Currently set to semi-auto.  Activate to switch to a different firing mode.",
+
+    "weight": "17 g",
+    "volume": "5 ml",
+    "integral_volume": "3 ml",
+
+    "material": ["steel"],
+
+    "symbol": ":",
+    "color": "dark_gray",
+
+    "mode_modifier": [["DEFAULT", "semi-auto", 1]],
+
+    "location": "mechanism",
+    "mod_targets": [
+      "modular_ar15",
+      "modular_m4_carbine",
+      "modular_m16a4",
+      "modular_m16_auto_rifle",
+      "modular_m27_assault_rifle"
+    ],
+    "install_time": "5 s",
+
+    "use_action": {
+      "type": "transform",
+      "target": "fire_selector_ar15_burst",
+
+      "menu_text": "Switch to burst",
+
+      "moves": 60
+    },
+
+    "price": 1500,
+    "price_postapoc": 500
+  },
+  {
+    "id": "fire_selector_ar15_burst",
+    "copy-from": "fire_selector_ar15_semi",
+    "type": "GUNMOD",
+
+    "name": {
+      "str": "AR-15 fire selector (burst)"
+    },
+    "description": "A fire selector mechanism for civilian AR-15s and related firearms.  Allows the gun to switch firing modes.  Currently set to 3-round burst fire.  Activate to switch to a different firing mode.",
+
+    "mode_modifier": [["DEFAULT", "burst", 3]],
+
+    "use_action": {
+      "type": "transform",
+      "target": "fire_selector_ar15_auto",
+
+      "menu_text": "Switch to auto",
+
+      "moves": 60
+    }
+  },
+  {
+    "id": "fire_selector_ar15_auto",
+    "copy-from": "fire_selector_ar15_semi",
+    "type": "GUNMOD",
+
+    "name": {
+      "str": "AR-15 fire selector (auto)"
+    },
+    "description": "A fire selector mechanism for civilian AR-15s and related firearms.  Allows the gun to switch firing modes.  Currently set to full-auto.  Activate to switch to a different firing mode.",
+
+    "mode_modifier": [["DEFAULT", "auto", 10]],
+
+    "use_action": {
+      "type": "transform",
+      "target": "fire_selector_ar15_safe",
+
+      "menu_text": "Switch to safe",
+
+      "moves": 60
+    }
+  },
+  {
+    "id": "fire_selector_ar15_safe",
+    "copy-from": "fire_selector_ar15_semi",
+    "type": "GUNMOD",
+
+    "name": {
+      "str": "AR-15 fire selector (safe)"
+    },
+    "description": "A fire selector mechanism for civilian AR-15s and related firearms.  Allows the gun to switch firing modes.  Currently, the safety is on, preventing the gun from firing.  Activate to switch to a different firing mode.",
+
+    "mode_modifier": [["DEFAULT", "safe", 0]],
+
+    "use_action": {
+      "type": "transform",
+      "target": "fire_selector_ar15_semi",
+
+      "menu_text": "Switch to semi",
+
+      "moves": 60
+    }
+  }
+]
