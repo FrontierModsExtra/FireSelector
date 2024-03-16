@@ -1,0 +1,17 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "gunmod_fire_selector",
+
+    "name": "Fire Selector",
+    "description": "An experiment to see if fire selectors would work as a gunmod",
+
+    "authors": ["Hyperseeker"],
+
+    "category": "misc_additions",
+
+    "dependencies": ["dda"],
+
+    "path": "json"
+  }
+]
